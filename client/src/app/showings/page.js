@@ -1,6 +1,7 @@
 // fetching the data from somewhere
 "use client"
 import { useEffect, useState } from "react";
+import ShowCard from "../components/ShowCard";
 
 export default function Showings() {
 
@@ -22,7 +23,7 @@ export default function Showings() {
       <p>List the theatre showings here...</p>
       <ul>
         {shows.map(show => {
-          return <p>{show.title}</p>
+          return <ShowCard title={show.title} image={show.image} />
         })}
       </ul>
     </main>
